@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_chatwith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et_chatWith"
+        android:gravity="center"
+        android:text="@string/chat_with" />
+
+    <EditText
+        android:id="@+id/et_chatWith"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_chatwith"
+        android:layout_marginLeft="5dp"
+        android:text="bot@xmpp.v-ki.net"
+        android:background="@android:color/white"
+        android:textColor="@android:color/widget_edittext_dark"
+        android:textColorHint="@android:color/widget_edittext_dark"
+        android:inputType="textEmailAddress"/>
+
+    <ListView
+        android:id="@+id/lv_chatList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_chatWith"
+        android:layout_above="@+id/et_chatContent"
+        android:layout_marginTop="5dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"/>
+
+    <EditText
+        android:id="@+id/et_chatContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_alignTop="@+id/btn_Send"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btn_Send"
+        android:background="@android:color/white"
+        android:scrollHorizontally="true"
+        android:text="gg"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"/>
+
+    <Button
+        android:id="@+id/btn_Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/send"/>
+
+</RelativeLayout>
